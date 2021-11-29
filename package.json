@@ -4,12 +4,12 @@
   "description": "A tiny blog with admin management using node.js, sequelize and BDD",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node-dev app.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/MathieuM29/My-admin-blog.git",
-    "script": "node-dev app.js"
+    "url": "git+https://github.com/MathieuM29/My-admin-blog.git"
   },
   "keywords": [],
   "author": "",
