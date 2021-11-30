@@ -1,0 +1,100 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+
+<svg width="347" height="255" view_box="0 0 347 255"
+xmlns="http://www.w3.org/2000/svg"
+xmlns:link="http://www.w3.org/1999/xlink">\n\n<desc>Généré par Mocodo 2.3.7 le Tue, 30 Nov 2021 08:38:47</desc>
+
+<rect id="frame" x="0" y="0" width="347" height="255" fill="#ffffbf" stroke="none" stroke-width="0"/>
+
+<!-- Association POSSEDE -->
+<line x1="78" y1="77" x2="211" y2="77" stroke="#74add1" stroke-width="2"/>
+<text x="122" y="94.0" fill="#d73027" font-family="Verdana" font-size="12">0,N</text>
+<line x1="309" y1="77" x2="211" y2="77" stroke="#74add1" stroke-width="2"/>
+<text x="254" y="94.0" fill="#d73027" font-family="Verdana" font-size="12">1,1</text>
+<g id="association-POSSEDE">
+	<path d="M 234 52 a 14 14 90 0 1 14 14 V 77 h -74 V 66 a 14 14 90 0 1 14 -14" fill="#abd9e9" stroke="#abd9e9" stroke-width="0"/>
+	<path d="M 248 77.0 v 11 a 14 14 90 0 1 -14 14 H 188 a 14 14 90 0 1 -14 -14 V 77.0 H 74" fill="#e0f3f8" stroke="#e0f3f8" stroke-width="0"/>
+	<rect x="174" y="52" width="74" height="50" fill="none" rx="14" stroke="#74add1" stroke-width="2"/>
+	<line x1="174" y1="77" x2="248" y2="77" stroke="#74add1" stroke-width="1"/>
+	<text x="181" y="69.7" fill="#000000" font-family="Verdana" font-size="12">POSSEDE</text>
+</g>
+
+<!-- Association A -->
+<line x1="309" y1="77" x2="309" y2="204" stroke="#74add1" stroke-width="2"/>
+<text x="314.0" y="153" fill="#d73027" font-family="Verdana" font-size="12">1,N</text>
+<line x1="211" y1="204" x2="309" y2="204" stroke="#74add1" stroke-width="2"/>
+<text x="248" y="221.0" fill="#d73027" font-family="Verdana" font-size="12">0,N</text>
+<g id="association-A">
+	<path d="M 307 179 a 14 14 90 0 1 14 14 V 204 h -24 V 193 a 14 14 90 0 1 14 -14" fill="#abd9e9" stroke="#abd9e9" stroke-width="0"/>
+	<path d="M 321 204.0 v 11 a 14 14 90 0 1 -14 14 H 311 a 14 14 90 0 1 -14 -14 V 204.0 H 24" fill="#e0f3f8" stroke="#e0f3f8" stroke-width="0"/>
+	<rect x="297" y="179" width="24" height="50" fill="none" rx="14" stroke="#74add1" stroke-width="2"/>
+	<line x1="297" y1="204" x2="321" y2="204" stroke="#74add1" stroke-width="1"/>
+	<text x="304" y="196.7" fill="#000000" font-family="Verdana" font-size="12">A</text>
+</g>
+
+<!-- Entity category -->
+<g id="entity-category">
+	<g id="frame-category">
+		<rect x="179" y="162" width="64" height="25" fill="#fdae61" stroke="#fdae61" stroke-width="0"/>
+		<rect x="179" y="187.0" width="64" height="59" fill="#fee090" stroke="#fee090" stroke-width="0"/>
+		<rect x="179" y="162" width="64" height="84" fill="none" stroke="#f46d43" stroke-width="2"/>
+		<line x1="179" y1="187" x2="243" y2="187" stroke="#f46d43" stroke-width="1"/>
+	</g>
+	<text x="184" y="179.7" fill="#000000" font-family="Verdana" font-size="12">category</text>
+	<text x="184" y="204.8" fill="#000000" font-family="Verdana" font-size="12">number</text>
+	<line x1="184" y1="207" x2="232" y2="207" stroke="#000000" stroke-width="1"/>
+	<text x="184" y="221.8" fill="#000000" font-family="Verdana" font-size="12">name</text>
+	<text x="184" y="238.8" fill="#000000" font-family="Verdana" font-size="12">color</text>
+</g>
+
+<!-- Entity article -->
+<g id="entity-article">
+	<g id="frame-article">
+		<rect x="280" y="18" width="58" height="25" fill="#fdae61" stroke="#fdae61" stroke-width="0"/>
+		<rect x="280" y="43.0" width="58" height="93" fill="#fee090" stroke="#fee090" stroke-width="0"/>
+		<rect x="280" y="18" width="58" height="118" fill="none" stroke="#f46d43" stroke-width="2"/>
+		<line x1="280" y1="43" x2="338" y2="43" stroke="#f46d43" stroke-width="1"/>
+	</g>
+	<text x="290" y="35.7" fill="#000000" font-family="Verdana" font-size="12">article</text>
+	<text x="285" y="60.7" fill="#000000" font-family="Verdana" font-size="12">number</text>
+	<line x1="285" y1="63" x2="333" y2="63" stroke="#000000" stroke-width="1"/>
+	<text x="285" y="77.8" fill="#000000" font-family="Verdana" font-size="12">title</text>
+	<text x="285" y="94.8" fill="#000000" font-family="Verdana" font-size="12">content</text>
+	<text x="285" y="111.8" fill="#000000" font-family="Verdana" font-size="12">date</text>
+	<text x="285" y="128.8" fill="#000000" font-family="Verdana" font-size="12">image</text>
+</g>
+
+<!-- Entity user -->
+<g id="entity-user">
+	<g id="frame-user">
+		<rect x="39" y="9" width="78" height="25" fill="#fdae61" stroke="#fdae61" stroke-width="0"/>
+		<rect x="39" y="34.0" width="78" height="111" fill="#fee090" stroke="#fee090" stroke-width="0"/>
+		<rect x="39" y="9" width="78" height="136" fill="none" stroke="#f46d43" stroke-width="2"/>
+		<line x1="39" y1="34" x2="117" y2="34" stroke="#f46d43" stroke-width="1"/>
+	</g>
+	<text x="64" y="26.7" fill="#000000" font-family="Verdana" font-size="12">user</text>
+	<text x="44" y="51.7" fill="#000000" font-family="Verdana" font-size="12">number</text>
+	<line x1="44" y1="54" x2="92" y2="54" stroke="#000000" stroke-width="1"/>
+	<text x="44" y="68.7" fill="#000000" font-family="Verdana" font-size="12">name</text>
+	<text x="44" y="85.8" fill="#000000" font-family="Verdana" font-size="12">mail</text>
+	<text x="44" y="102.8" fill="#000000" font-family="Verdana" font-size="12">password</text>
+	<text x="44" y="119.8" fill="#000000" font-family="Verdana" font-size="12">description</text>
+	<text x="44" y="136.8" fill="#000000" font-family="Verdana" font-size="12">image</text>
+</g>
+
+<!-- Entity article_has_category -->
+<g id="entity-article_has_category">
+	<g id="frame-article_has_category">
+		<rect x="9" y="170" width="138" height="25" fill="#fdae61" stroke="#fdae61" stroke-width="0"/>
+		<rect x="9" y="195.0" width="138" height="43" fill="#fee090" stroke="#fee090" stroke-width="0"/>
+		<rect x="9" y="170" width="138" height="68" fill="none" stroke="#f46d43" stroke-width="2"/>
+		<line x1="9" y1="195" x2="147" y2="195" stroke="#f46d43" stroke-width="1"/>
+	</g>
+	<text x="14" y="187.7" fill="#000000" font-family="Verdana" font-size="12">article_has_category</text>
+	<text x="14" y="212.8" fill="#000000" font-family="Verdana" font-size="12">number_article</text>
+	<line x1="14" y1="215" x2="106" y2="215" stroke="#000000" stroke-width="1"/>
+	<text x="14" y="229.8" fill="#000000" font-family="Verdana" font-size="12">number_category</text>
+</g>
+</svg>

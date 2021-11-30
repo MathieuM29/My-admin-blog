@@ -1,0 +1,7 @@
+user: number, name, mail, password, description, image
+POSSEDE, 0N user, 11 article
+article: number, title, content, date, image
+
+article_has_category: number_article, number_category
+category: number, name, color
+A, 1N article, 0N category
