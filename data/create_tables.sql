@@ -2,59 +2,60 @@
 BEGIN;
 
 -- On supprime l'existant, si elle existe
-DROP TABLE IF EXISTS "list", "card", "label", "card_has_label";
+DROP TABLE IF EXISTS "author", "article", "category", "article_has_category";
 
--- On crée la table list
-CREATE TABLE "list" (
+-- On crée la table author
+CREATE TABLE "author" (
     -- Un id avec SERIAL qui est un pseudo-type de PostgresSQL
     -- "id" SERIAL PRIMARY KEY,
     "id" INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     "name" TEXT NOT NULL DEFAULT '',
-    "position" INTEGER NOT NULL DEFAULT 0,
+    "mail" TEXT NOT NULL DEFAULT '',
+    "password" TEXT NOT NULL DEFAULT '',
+    "description" TEXT NOT NULL DEFAULT '',
+    "image" TEXT NOT NULL DEFAULT '',
     "created_at" TIMESTAMPTZ NOT NULL DEFAULT NOW(),
     "updated_at" TIMESTAMPTZ
 );
 
--- On crée la table carte
-CREATE TABLE "card" (
+-- On crée la table article
+CREATE TABLE "article" (
     "id" INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    "title" TEXT NOT NULL DEFAULT '',
     "content" TEXT NOT NULL DEFAULT '',
-    "color" TEXT NOT NULL DEFAULT '#FFF',
-    "position" INTEGER NOT NULL DEFAULT 0,
-    "list_id" INTEGER NOT NULL REFERENCES list("id") ON DELETE CASCADE,
+    "image" TEXT NOT NULL DEFAULT '',
+    "author_id" INTEGER NOT NULL REFERENCES "author"("id"),
     "created_at" TIMESTAMPTZ NOT NULL DEFAULT NOW(),
     "updated_at" TIMESTAMPTZ
 );
 
--- On crée la table label
-CREATE TABLE "label" (
+-- On crée la table category
+CREATE TABLE "category" (
     "id" INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     "name" TEXT NOT NULL DEFAULT '',
-    "color" TEXT NOT NULL DEFAULT '#FFF',
-    "created_at" TIMESTAMPTZ NOT NULL DEFAULT NOW(),
-    "updated_at" TIMESTAMPTZ
+    "color" TEXT NOT NULL DEFAULT '#FFF'
 );
 
-CREATE TABLE "card_has_label" (
-    "card_id" INTEGER NOT NULL REFERENCES card("id") ON DELETE CASCADE,
-    "label_id" INTEGER NOT NULL REFERENCES label("id") ON DELETE CASCADE,
+CREATE TABLE "article_has_category" (
+    "article_id" INTEGER NOT NULL REFERENCES article("id") ON DELETE CASCADE,
+    "category_id" INTEGER NOT NULL REFERENCES category("id") ON DELETE CASCADE,
     "created_at" TIMESTAMPTZ NOT NULL DEFAULT NOW()
     -- ici pas besoin de updated_at : une relation ne se met pas à jour, soit on l'ajoute, soit on la supprime
 );
 
 -- Une fois les tables crées, on va les remplir
 
-INSERT INTO "list"("name")
-VALUES ('Première liste');
+INSERT INTO "author"("name", "mail", "password", "description", "image")
+VALUES ('Math', 'math@gmail.com', 'boo', 'Premier utilisateur', 'math');
 
-INSERT INTO "card"("content", "color", "list_id")
-VALUES ('Carte 1', '#fff696', 1);
+INSERT INTO "article"("title", "content", "image", "author_id")
+VALUES ('Article 1', 'Cillum nostrud dolor voluptate eiusmod et exercitation Lorem cupidatat non tempor. Cillum sint nulla aute exercitation do veniam ea dolor Lorem consectetur adipisicing laboris. Consequat elit quis amet culpa. Mollit fugiat est magna quis laboris sint eiusmod duis.', 'article1', 1);
 
-INSERT INTO "label"("name", "color")
-VALUES ('Urgent', '#F00');
+INSERT INTO "category"("name", "color")
+VALUES ('Faits divers', '#808080');
 
 -- a ne pas oublier ... la liaison !
-INSERT INTO "card_has_label" ("card_id", "label_id")
+INSERT INTO "article_has_category" ("article_id", "category_id")
 VALUES (1,1);
 
 COMMIT;
