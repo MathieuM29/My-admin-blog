@@ -1,6 +1,6 @@
 ## mld ##
 
-author(id, name, mail, password, description, image)
-article(id, title, content, image)
-category(id, name, color)
-article_has_category(article_id, category_id)
+author(id SERIAL, name TEXT, mail TEXT, password TEXT, description TEXT, image TEXT)
+article(id SERIEL, title TEXT, content TEXT, image TEXT, #author(id SERIAL))
+category(id SERIAL, name TEXT, color TEXT)
+article_has_category(#article(id SERIAL), #category(id SERIAL))
