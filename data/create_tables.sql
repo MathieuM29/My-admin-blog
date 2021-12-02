@@ -33,7 +33,9 @@ CREATE TABLE "article" (
 CREATE TABLE "category" (
     "id" INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     "name" TEXT NOT NULL DEFAULT '',
-    "color" TEXT NOT NULL DEFAULT '#FFF'
+    "color" TEXT NOT NULL DEFAULT '#FFF',
+    "created_at" TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+    "updated_at" TIMESTAMPTZ
 );
 
 CREATE TABLE "article_has_category" (
