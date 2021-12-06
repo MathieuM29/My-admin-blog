@@ -92,6 +92,70 @@ const authorController = {
            res.status(500).json(error.toString()); 
         }
     },
+
+    updateOne: async (req,res) => {
+
+        try {
+
+            const authorId = Number(req.params.id);
+            const author = await Author.findByPk(authorId, {
+                include: ['categories'],
+                // order: ['id', 'ASC']
+            });
+
+            if (!author)
+            {
+                return res.status(500).json(`Il n'y a pas d'auteur avec l'id ${authorId}`);
+            }
+
+            const name = req.body.name;
+            const mail = req.body.mail;
+            const password = req.body.password;
+            const description = req.body.description;
+            const image = req.body.image;
+
+            if (name && mail && password && description && image)
+            {
+                author.name = name;
+                author.mail = mail;
+                author.password = password;
+                author.description = description;
+                author.image = image;
+            }
+
+            await author.save();
+
+            res.json(author);
+
+            
+        } catch (error){
+           console.trace(error);
+           res.status(500).json(error.toString()); 
+        }
+    },
+
+    deleteOne: async (req,res) => {
+
+        try {
+
+            const authorId = Number(req.params.id);
+            const author = await Author.findByPk(authorId, {});
+
+            if (!author)
+            {
+                return res.status(500).json(`Il n'y a pas d'auteur avec l'id ${authorId}, je ne peut donc pas le supprimer !`);
+            }
+
+            await author.destroy();
+
+            res.json(`L'auteur avec l'id : ${authorId} à bien été supprimé !`);
+
+            
+        } catch (error){
+           console.trace(error);
+           res.status(500).json(error.toString()); 
+        }
+    },
 };
 
 module.exports = authorController;
